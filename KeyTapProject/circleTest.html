@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Test</title>
+	<script type="text/javascript" src="paper-full.js"></script>
+	<link rel="stylesheet" type="text/css" href="circle.css">
+	<script type="text/paperscript" canvas="myCanvas">
+	
+	// var myCircle = new Path.Circle(new Point(100, 70), 50);
+	// myCircle.fillColor = 'yellow';
+
+
+ // for (var i = 0; i < count; i++) {
+ //        // The center position is a random point in the view:
+ //        var center = Point.random() * view.size;
+ //        var placed = symbol.place(center);
+ //        var scale = (i + 1) / count;
+ //        placed.scale(scale);
+ //        placed.data.vector = new Point({
+ //            angle: Math.random() * 360,
+ //            length : scale * Math.random() / 5
+ //        });
+ //    }
+
+	var circlePath = new Path.Circle(new Point(50, 30), 10);
+		circlePath.fillColor = 'aquamarine';
+		var squareSymbol = new Symbol(circlePath);
+
+	for(var i = 0; i < 10; i++) {
+		 var placedSymbol = squareSymbol.place(new Point(20 + (i * 40), 50));
+	}
+
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+
+</body>
+</html>
